@@ -1,0 +1,24 @@
+local flynum = 1
+local fly = "Fly"
+local work = true
+
+fly = fly .. flynum 
+while wait() do
+repeat 
+flynum = flynum + 1
+local fly = "Fly"
+local total = fly .. flynum
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true 
+game.Players.LocalPlayer.Character.Head.Anchored = true 
+local args = {
+[1] = total
+}
+
+game:GetService("Players").LocalPlayer.Character.Eat:FireServer(unpack(args))   
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true 
+game.Players.LocalPlayer.Character.Head.Anchored = true 
+until flynum == 280
+flynum = 1
+end
+--
